@@ -5,6 +5,7 @@ using System.Text;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using ConsoleAppWheatherApi.Iterfaces;
+using Newtonsoft.Json;
 
 namespace ConsoleAppWheatherApi.WheatherApi
 {
@@ -30,10 +31,10 @@ namespace ConsoleAppWheatherApi.WheatherApi
         }
         private static WeatherReport JsonParser(string weather)
         {
-            JObject jobj = JObject.Parse(weather);
-            JToken jToken = jobj.First;
-            string weatherState = jToken.First["results"]["channel"]["item"]["condition"].ToString();
-            WeatherReport report = Newtonsoft.Json.JsonConvert.DeserializeObject<WeatherReport>(weatherState);
+            var jobj = JObject.Parse(weather);
+            var jToken = jobj.First;
+            var weatherState = jToken.First["results"]["channel"]["item"]["condition"].ToString();
+            var report = JsonConvert.DeserializeObject<WeatherReport>(weatherState);
             return report;
         }
     }

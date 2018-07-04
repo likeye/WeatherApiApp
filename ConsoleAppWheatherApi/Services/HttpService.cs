@@ -8,7 +8,7 @@ namespace ConsoleAppWheatherApi.Services
 {
     public class HttpService : IHttp
     {
-        public HttpClient connect(string woeid)
+        public HttpClient Connect(string woeid)
         {
             var client = new HttpClient()
             {

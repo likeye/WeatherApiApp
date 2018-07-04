@@ -7,6 +7,6 @@ namespace ConsoleAppWheatherApi.Interfaces
 {
     public interface IHttp
     {
-        HttpClient connect(string woeid);
+        HttpClient Connect(string woeid);
     }
 }

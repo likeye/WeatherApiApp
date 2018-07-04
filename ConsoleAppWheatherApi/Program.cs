@@ -14,10 +14,10 @@ namespace ConsoleAppWheatherApi
             HttpService httpService = new HttpService();
             WeatherApiOperations weatherApi = new WeatherApiOperations();
 
-            var client1 = httpService.connect("44418"); //Londyn
-            var client2 = httpService.connect("523920"); // Warszawa
-            var client3 = httpService.connect("615702"); // Paryż
-            var client4 = httpService.connect("796597"); // Praga
+            var client1 = httpService.Connect("44418"); //Londyn
+            var client2 = httpService.Connect("523920"); // Warszawa
+            var client3 = httpService.Connect("615702"); // Paryż
+            var client4 = httpService.Connect("796597"); // Praga
             var report1 = weatherApi.GetWeather(client1);
             var report2 = weatherApi.GetWeather(client2);
             var report3 = weatherApi.GetWeather(client3);
