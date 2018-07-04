@@ -25,7 +25,7 @@ namespace ConsoleAppWheatherApi.WheatherApi
                 }
                 else
                 {
-                    return new WeatherReport(); //?
+                    throw new ArgumentException("response failed :("); //?
                 }
             }
         }
